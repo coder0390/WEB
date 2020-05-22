@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>用户留言表单</title>
+
+		<style>
+		h1
+		{
+			font-size:40px;
+			font-weight:bold;
+		}
+
+		input[type="text"]
+		{
+			width:150px
+		}
+
+		#email
+		{
+			width:300px
+		}
+		
+		textarea
+		{
+			overflow:scroll;
+			overflow-x:hidden;
+			height:100px;
+			width:300px;
+		}
+
+		</style>
+	
+		<script type="text/javascript">
+			function isemail(){
+				var email_user=document.getElementById("email").value;
+				var email_right=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+			return email_right.test(email_user);
+			}
+			
+			function ok(){
+				if(isemail()){
+					var content="提交成功！"+"姓名："+document.getElementById("name").value+"&"+"性别："+document.getElementById("sex").options[document.getElementById("sex").selectedIndex].value+"&"+"电话："+document.getElementById("tel").value+"&"+"邮件："+document.getElementById("email").value+"&"+"留言："+document.getElementById("message").value;
+					alert(content);		
+				}
+				else
+					alert("邮件输入格式错误，请检查！");
+			}
+	
+			function remake(){
+				document.getElementById("name").value="";
+				document.getElementById("sex").selectedIndex=0;
+				document.getElementById("tel").value="";
+				document.getElementById("email").value="";
+				document.getElementById("message").value="";
+			}
+			
+		</script>
+
+	</head>
+
+	<body>
+		<h1>请填写留言</h1>
+
+		<p>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" id="name"/>
+		</p>
+
+		<p>
+			性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：					<select id="sex">
+				<option value="man">男</option>
+				<option value="woman">女</option>
+			</select>
+		</p>
+
+		<p>
+			电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：<input type="text" id="tel"/>
+		</p>
+	
+		<p>
+			电子邮件：<input type="text" id="email"/>
+		</p>
+
+		<p>
+			留言：<br/><textarea id="message"></textarea>
+		</p>
+
+		<p>
+			<input type="submit" value="提交" onclick="ok()"/>
+			<input type="submit" value="重写" onclick="remake()"/>
+		</p>
+
+	</body>
+
+<html>
