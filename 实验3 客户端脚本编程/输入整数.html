@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+	
+		<title>输入整数</title>
+
+		<script type="text/javascript">
+			function num(){
+				var a=document.getElementById("num").value;
+				if(a>=1 && a<=100)
+					alert("你输入对了，谢谢！");
+				else
+					alert("请输入1个1到100之间的数字。");	
+			}
+		</script>
+
+	</head>
+
+	<body>
+	<p style="font-size:30px">简单验证</p>
+
+	<hr />
+
+	<p>请输入1个1到100之间的数字：<input type="text" id="num"/></p>
+	
+	<p><input type="submit" value="提交" onclick="num()"/></p>	
+
+	</body>
+
+<html>
