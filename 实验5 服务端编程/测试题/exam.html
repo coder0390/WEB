@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+    <script src="score.js"></script>
+    <title>test</title>
+    <style type="text/css">
+        label{
+            text-align: left;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>在线考试系统</h2>
+    <br><br>
+    <form>
+        <label>1.中国的直辖市有</label>
+        <div class="row placeholder" style="margin-left: 10px; height: 50px">
+            <label class="checkbox-inline">
+                <input type="checkbox" id="id_sh" value="1">上海
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="id_bj" value="2">北京
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="id_tj" value="3">天津
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="id_sz" value="4">深圳
+            </label>
+        </div>
+        <label>2.1+1=</label>
+        <div class="row placeholder" style="margin-left: 10px;height: 50px">
+            <label class="radio-inline">
+                <input type="radio" name="op1_inline" id="id_1" checked>1
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="op1_inline" id="id_2">2
+            </label>
+        </div>
+        <div class="row placeholder" style="margin-left: 20px;height: 50px">
+            <button id="btn_Score" type="button">提交</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

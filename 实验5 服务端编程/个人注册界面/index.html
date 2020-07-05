@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+    <script src="sign.js"></script>
+    <style type="text/css">
+        input{
+            width: 150%;
+            height: auto;
+        }
+        td{
+            height: 50px;
+        }
+    </style>
+    
+    <title>个人注册页面</title>
+</head>
+
+<body>
+<div class="container" align="center">
+    <form>
+        <table>
+            <h2>个人注册页面</h2>
+            <hr>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" id="u_account" placeholder="以下划线或字母开头"></td>
+            </tr>
+            <tr>
+                <td>用户姓名：</td>
+                <td><input type="text" id="u_name"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" id="u_password" placeholder="要求包含大小写字母、数字，不少于8位"></td>
+            </tr>
+            <tr>
+                <td>出生日期：</td>
+                <td><input type="date" id="u_date" min="1900-01-01" max="2021-01-01"></td>
+            </tr>
+            <tr>
+                <td>电话：</td>
+                <td><input type="tel" id="u_tel"></td>
+            </tr>
+            <tr>
+                <td>email:</td>
+                <td><input type="text" id="u_email"></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="sign">提交</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
